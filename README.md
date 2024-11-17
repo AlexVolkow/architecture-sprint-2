@@ -62,6 +62,22 @@ cd mongo-sharding-repl
 
 ## Задание 4. Кэширование
 
+### **Запуск**
+
+1) Перейти в директорую sharding-repl-cache
+```sh
+cd sharding-repl-cache
+```
+2) Запустить `docker compose`
+```sh
+ docker compose up -d
+```
+
+3) Иницировать БД
+```sh
+./sharding-repl-cache.sh
+```
+
 ## Задание 5. Service Discovery и балансировка с API Gateway
 
 ## Задание 6. CDN
