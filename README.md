@@ -10,7 +10,7 @@
 
 ## Задание 2. Шардирование
 
-**Запуск**
+### **Запуск**
 
 1) Перейти в директорую mongo-sharding
 ```sh
@@ -43,6 +43,22 @@ docker exec -it shard2 mongosh --port 27019
 ```
 
 ## Задание 3. Репликация
+
+### **Запуск**
+
+1) Перейти в директорую mongo-sharding-repl
+```sh
+cd mongo-sharding-repl
+```
+2) Запустить `docker compose`
+```sh
+ docker compose up -d
+```
+
+3) Иницировать БД
+```sh
+./mongo-sharding-repl.sh
+```
 
 ## Задание 4. Кэширование
 
