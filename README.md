@@ -2,7 +2,7 @@
 
 ## Задание 1. Планирование
 
-[Ссылка на схему](https://drive.google.com/file/d/1jHPhlwLspF6jt_S2BrUmCjku101KlSXU/view?usp=sharing![img.png](img.png))
+[Ссылка на схему](https://drive.google.com/file/d/1b3CCx1F1zv3LX8R-41d1KrrDipc0boWM/view?usp=sharing)
 
 [Ссылка на файл](assets/task1.drawio)
 
@@ -80,4 +80,17 @@ cd sharding-repl-cache
 
 ## Задание 5. Service Discovery и балансировка с API Gateway
 
+
+[Ссылка на схему](https://drive.google.com/file/d/1jHPhlwLspF6jt_S2BrUmCjku101KlSXU/view?usp=sharing)
+
+[Ссылка на файл](assets/task5.drawio)
+
+![AS](assets/task5.png)
+
 ## Задание 6. CDN
+
+[Ссылка на схему](https://drive.google.com/file/d/1Rh5qBUKKATAuXt_zPSbwScGnKyagRTp8/view?usp=sharing)
+
+[Ссылка на файл](assets/task6.drawio)
+
+![AS](assets/task6.png)
