@@ -1,35 +1,96 @@
-# pymongo-api
+# Модуль 2. Шардирование и репликация
 
-## Как запустить
+## Задание 1. Планирование
 
-Запускаем mongodb и приложение
+[Ссылка на схему](https://drive.google.com/file/d/1b3CCx1F1zv3LX8R-41d1KrrDipc0boWM/view?usp=sharing)
 
-```shell
-docker compose up -d
+[Ссылка на файл](assets/task1.drawio)
+
+![AS](assets/task1.png)
+
+## Задание 2. Шардирование
+
+### **Запуск**
+
+1) Перейти в директорую mongo-sharding
+```sh
+cd mongo-sharding
+```
+2) Запустить `docker compose`
+```sh
+ docker compose up -d
 ```
 
-Заполняем mongodb данными
-
-```shell
-./scripts/mongo-init.sh
+3) Иницировать БД
+```sh
+./mongo-sharding.sh
 ```
 
-## Как проверить
+4) Проверить количество документов 
 
-### Если вы запускаете проект на локальной машине
-
-Откройте в браузере http://localhost:8080
-
-### Если вы запускаете проект на предоставленной виртуальной машине
-
-Узнать белый ip виртуальной машины
-
-```shell
-curl --silent http://ifconfig.me
+```sh
+ docker exec -it shard1 mongosh --port 27018
+ > use somedb;
+ > db.helloDoc.countDocuments();
+ > exit();
 ```
 
-Откройте в браузере http://<ip виртуальной машины>:8080
+```sh
+docker exec -it shard2 mongosh --port 27019
+ > use somedb;
+ > db.helloDoc.countDocuments();
+ > exit();
+```
 
-## Доступные эндпоинты
+## Задание 3. Репликация
 
-Список доступных эндпоинтов, swagger http://<ip виртуальной машины>:8080/docs
+### **Запуск**
+
+1) Перейти в директорую mongo-sharding-repl
+```sh
+cd mongo-sharding-repl
+```
+2) Запустить `docker compose`
+```sh
+ docker compose up -d
+```
+
+3) Иницировать БД
+```sh
+./mongo-sharding-repl.sh
+```
+
+## Задание 4. Кэширование
+
+### **Запуск**
+
+1) Перейти в директорую sharding-repl-cache
+```sh
+cd sharding-repl-cache
+```
+2) Запустить `docker compose`
+```sh
+ docker compose up -d
+```
+
+3) Иницировать БД
+```sh
+./sharding-repl-cache.sh
+```
+
+## Задание 5. Service Discovery и балансировка с API Gateway
+
+
+[Ссылка на схему](https://drive.google.com/file/d/1jHPhlwLspF6jt_S2BrUmCjku101KlSXU/view?usp=sharing)
+
+[Ссылка на файл](assets/task5.drawio)
+
+![AS](assets/task5.png)
+
+## Задание 6. CDN
+
+[Ссылка на схему](https://drive.google.com/file/d/1Rh5qBUKKATAuXt_zPSbwScGnKyagRTp8/view?usp=sharing)
+
+[Ссылка на файл](assets/task6.drawio)
+
+![AS](assets/task6.png)
